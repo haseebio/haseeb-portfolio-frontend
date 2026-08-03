@@ -1,175 +1,60 @@
-// 1. Imports (Only define these ONCE at the top)
-import cp1 from '../assets/projects/images/cafe-project/cp1.webp'
-import cp2 from '../assets/projects/images/cafe-project/cp2.webp'
-import cp3 from '../assets/projects/images/cafe-project/cp3.webp'
-
-import ca1 from '../assets/projects/images/chat-app/ca1.webp'
-import ca2 from '../assets/projects/images/chat-app/ca2.webp'
-
-import co1 from '../assets/projects/images/crud-operation/co1.webp'
-import co2 from '../assets/projects/images/crud-operation/co2.webp'
-import co3 from '../assets/projects/images/crud-operation/co3.webp'
-
-import pg1 from '../assets/projects/images/password-generator/pg1.webp'
-import pg2 from '../assets/projects/images/password-generator/pg2.webp'
-import pg3 from '../assets/projects/images/password-generator/pg3.webp'
-import pg4 from '../assets/projects/images/password-generator/pg4.webp'
-
-import pc1 from '../assets/projects/images/plutto/pc1.webp'
-import pc2 from '../assets/projects/images/plutto/pc2.webp'
-import pc3 from '../assets/projects/images/plutto/pc3.webp'
-import pc4 from '../assets/projects/images/plutto/pc4.webp'
-import pc5 from '../assets/projects/images/plutto/pc5.webp'
-import pc6 from '../assets/projects/images/plutto/pc6.webp'
-import pc7 from '../assets/projects/images/plutto/pc7.webp'
-import pc8 from '../assets/projects/images/plutto/pc8.webp'
-import pc9 from '../assets/projects/images/plutto/pc9.webp'
-
-import su1 from '../assets/projects/images/sign-up-form/su1.webp'
-import su2 from '../assets/projects/images/sign-up-form/su2.webp'
-import su3 from '../assets/projects/images/sign-up-form/su3.webp'
-
-import wa1 from '../assets/projects/images/weather-app/wa1.webp'
-import wa2 from '../assets/projects/images/weather-app/wa2.webp'
-import wa3 from '../assets/projects/images/weather-app/wa3.webp'
-import wa4 from '../assets/projects/images/weather-app/wa4.webp'
-
-import whc1 from '../assets/projects/images/website-health-checker/whc1.webp'
-import whc2 from '../assets/projects/images/website-health-checker/whc2.webp'
-import whc3 from '../assets/projects/images/website-health-checker/whc3.webp'
-import whc4 from '../assets/projects/images/website-health-checker/whc4.webp'
-
-// 2. Projects Data
-// tags array drives the Frontend/Backend filter tabs.
-// All projects appear in Full Stack. Additionally tagged projects
-// appear in Frontend or Backend tabs respectively.
-export const projects = [
-  {
-    id: 1, category: 'fullstack', tags: ['fullstack', 'backend'],
-    title: 'Website Health Checker',
-    desc: 'Audits any business website for SEO, SSL, mobile readiness and missed opportunities.',
-    stack: ['React', 'Node.js', 'Express', 'Cheerio', 'Axios'],
-    images: [whc1, whc2, whc3, whc4],
-    github: 'https://github.com/haseebcodess',
-    demo: 'https://websitehealthchecker.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 2, category: 'fullstack', tags: ['fullstack', 'backend'],
-    title: 'Full-Stack CRUD App',
-    desc: 'Complete data lifecycle — GET, POST, PUT, DELETE. MongoDB schema from scratch, MVC backend.',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Axios', 'Postman'],
-    images: [co1, co2, co3],
-    github: 'https://github.com/haseebcodess/crud-operation',
-    demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 3, category: 'fullstack', tags: ['fullstack', 'frontend'],
-    title: 'Pluto Coffee & Art',
-    desc: 'Live client project for a real café in DHA Y-Block, Lahore. Dark luxury UI with glassmorphism.',
-    stack: ['React', 'Node.js', 'Express', 'CSS3'],
-    images: [pc1, pc2, pc3, pc4, pc5, pc6, pc7, pc8, pc9],
-    github: 'https://github.com/haseebcodess',
-    demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 4, category: 'fullstack', tags: ['fullstack', 'backend'],
-    title: 'Real-Time Chat App',
-    desc: 'Live bidirectional messaging with Socket.io. Room-based chat, real-time event broadcasting.',
-    stack: ['Node.js', 'Socket.io', 'Express', 'React'],
-    images: [ca1, ca2],
-    github: 'https://github.com/haseebcodess',
-    demo: 'https://openchat-live.vercel.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 5, category: 'fullstack', tags: ['fullstack', 'frontend'],
-    title: 'RJ Cafe Website',
-    desc: 'Complete restaurant website with dynamic JS menu — no page reloads.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
-    images: [cp1, cp2, cp3],
-    github: 'https://github.com/haseebcodess/cafe',
-    demo: 'https://rjcafe.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 6, category: 'fullstack', tags: ['fullstack', 'frontend'],
-    title: 'Weather Application',
-    desc: 'Real-time weather from OpenWeatherMap API. Light/dark mode toggle.',
-    stack: ['React', 'Axios', 'OpenWeather API', 'CSS3'],
-    images: [wa1, wa2, wa3, wa4],
-    github: 'https://github.com/haseebcodess/weather-app',
-    demo: 'https://haseeb-weather-app.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 7, category: 'fullstack', tags: ['fullstack', 'frontend'],
-    title: 'Password Generator',
-    desc: 'Configurable password generator with one-click clipboard copy using the Clipboard API.',
-    stack: ['React', 'Vite', 'React Hooks', 'Clipboard API'],
-    images: [pg1, pg2, pg3, pg4],
-    github: 'https://github.com/haseebcodess/Random-Password-Generator',
-    demo: 'https://rjpasswordchanger.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 8, category: 'fullstack', tags: ['fullstack', 'backend'],
-    title: 'Sign Up Form API',
-    desc: 'RESTful Node/Express backend with POST and GET endpoints for user registration.',
-    stack: ['Node.js', 'Express', 'Axios', 'REST API'],
-    images: [su1, su2, su3],
-    github: 'https://github.com/haseebcodess/react-backend',
-    demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  }
+export const projects=[
+  {id:1,category:'fullstack',featured:true,title:'Haseeb Shop',tagline:'Full-Stack E-Commerce Platform',desc:'Production-ready full-stack e-commerce platform with dual Admin and Customer panels, JWT authentication, image uploads, multi-currency support (USD, PKR, JPY, CNY, EUR, GBP), and full live deployment.',stack:['React.js','Node.js','Express.js','MongoDB','JWT','Multer','REST API','MVC'],images:[],github:'https://github.com/haseebio/Haseeb-shop',demo:'https://haseeb-shop.vercel.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:2,category:'fullstack',featured:true,title:'Website Health Checker',tagline:'SEO & Technical Audit Tool',desc:'Audits any business website for SEO gaps, SSL, mobile readiness, robots.txt, sitemap, and missed opportunities. Built as a real freelance prospecting tool.',stack:['React','Node.js','Express','Cheerio','Axios'],images:[],github:'https://github.com/haseebio',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:4,category:'fullstack',title:'Real-Time Chat App',tagline:'Socket.io Messaging Platform',desc:'Live bidirectional messaging with Socket.io. Room-based chat, real-time event broadcasting between connected clients. No Firebase.',stack:['Node.js','Socket.io','Express','React'],images:[],github:'https://github.com/haseebio',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:5,category:'fullstack',title:'Full-Stack CRUD App',tagline:'Product Management System',desc:'Complete data lifecycle — GET, POST, PUT, DELETE. MongoDB schema from scratch, MVC backend, React frontend with Axios. All endpoints Postman-verified.',stack:['React','Node.js','Express','MongoDB','Axios'],images:[],github:'https://github.com/haseebio/crud-operation',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:6,category:'fullstack',title:'RJ Cafe Website',tagline:'Restaurant Website',desc:'Complete restaurant website with dynamic JS menu — no page reloads. Mobile-first Bootstrap layout, semantic HTML, clean maintainable CSS.',stack:['HTML5','CSS3','JavaScript','Bootstrap'],images:[],github:'https://github.com/haseebio/cafe',demo:'https://rjcafe.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:7,category:'fullstack',title:'Weather Application',tagline:'Real-Time Weather App',desc:'Real-time weather from OpenWeatherMap API. Light/dark mode toggle, city search with controlled inputs, graceful error handling. Fully responsive.',stack:['React','Axios','OpenWeather API','CSS3'],images:[],github:'https://github.com/haseebio/weather-app',demo:'https://haseeb-weather-app.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:8,category:'fullstack',title:'Password Generator',tagline:'Security Utility App',desc:'Configurable password generator — length, uppercase, lowercase, numbers, symbols. One-click clipboard copy using the Clipboard API.',stack:['React','Vite','React Hooks','Clipboard API'],images:[],github:'https://github.com/haseebio/Random-Password-Generator',demo:'https://rjpasswordchanger.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:9,category:'frontend',title:'RJ Cafe Website',tagline:'Restaurant Frontend',desc:'Complete restaurant website with dynamic JS menu. Mobile-first Bootstrap layout, semantic HTML, clean maintainable CSS.',stack:['HTML5','CSS3','JavaScript','Bootstrap'],images:[],github:'https://github.com/haseebio/cafe',demo:'https://rjcafe.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:11,category:'frontend',title:'Weather Application',tagline:'API-Powered Weather UI',desc:'Real-time weather from OpenWeatherMap API. Light/dark mode, city search, graceful error handling.',stack:['React','Axios','OpenWeather API','CSS3'],images:[],github:'https://github.com/haseebio/weather-app',demo:'https://haseeb-weather-app.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:12,category:'frontend',title:'Password Generator',tagline:'React Hooks Utility',desc:'Configurable password generator with one-click clipboard copy. Built with React Hooks, no unnecessary re-renders.',stack:['React','Vite','Hooks','Clipboard API'],images:[],github:'https://github.com/haseebio/Random-Password-Generator',demo:'https://rjpasswordchanger.netlify.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:13,category:'backend',title:'Haseeb Shop — API',tagline:'E-Commerce REST API',desc:'MVC-structured Express.js backend with JWT auth, bcrypt hashing, Multer file uploads, express-validator, protected REST endpoints, MongoDB Atlas.',stack:['Node.js','Express.js','MongoDB','JWT','bcryptjs','Multer','MVC'],images:[],github:'https://github.com/haseebio/Haseeb-shop',demo:'https://haseeb-shop.vercel.app',linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:14,category:'backend',title:'Real-Time Chat Backend',tagline:'Socket.io Server',desc:'Socket.io powered real-time chat backend. Room-based architecture, bidirectional event broadcasting. No Firebase.',stack:['Node.js','Socket.io','Express'],images:[],github:'https://github.com/haseebio',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:15,category:'backend',title:'CRUD REST API',tagline:'MVC Product API',desc:'Complete REST API — GET, POST, PUT, DELETE. MongoDB schema design, MVC pattern, all routes Postman-verified.',stack:['Node.js','Express','MongoDB','Postman'],images:[],github:'https://github.com/haseebio/crud-operation',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:16,category:'backend',title:'Website Health Checker API',tagline:'Audit Engine Backend',desc:'Express backend that audits websites — checks SEO, SSL, robots.txt, sitemap, mobile viewport, page size.',stack:['Node.js','Express','Cheerio','Axios'],images:[],github:'https://github.com/haseebio',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
+  {id:17,category:'backend',title:'Sign Up Form API',tagline:'User Registration API',desc:'RESTful Node/Express backend with POST and GET endpoints for user registration. Axios integration, JSON data exchange.',stack:['Node.js','Express','Axios','REST API'],images:[],github:'https://github.com/haseebio/react-backend',demo:null,linkedin:'https://www.linkedin.com/in/haseebio'},
 ];
-
-// 3. Skills Data
-export const skills = {
-  proficient: [
-    { name: 'HTML5', icon: 'H5', iconBg: '#FFF3E0', iconColor: '#E44D26' },
-    { name: 'CSS3', icon: 'C3', iconBg: '#E3F2FD', iconColor: '#1572B6' },
-    { name: 'JavaScript', icon: 'JS', iconBg: '#FFFDE7', iconColor: '#9A7500' },
-    { name: 'React.js', icon: 'Re', iconBg: '#E3F2FD', iconColor: '#0088CC' },
-    { name: 'Node.js', icon: 'No', iconBg: '#E8F5E9', iconColor: '#339933' },
-    { name: 'Express.js', icon: 'Ex', iconBg: '#F3F3F3', iconColor: '#555555' },
-    { name: 'MongoDB', icon: 'Mg', iconBg: '#E8F5E9', iconColor: '#47A248' },
-    { name: 'REST APIs', icon: 'AP', iconBg: '#EDE7F6', iconColor: '#7C3AED' },
-    { name: 'Git', icon: 'Gt', iconBg: '#FFF3E0', iconColor: '#F05032' },
-    { name: 'GitHub', icon: 'Gh', iconBg: '#E8E8E8', iconColor: '#333333' },
-    { name: 'Postman', icon: 'Po', iconBg: '#FFF0E6', iconColor: '#FF6C37' },
-    { name: 'Bootstrap', icon: 'Bs', iconBg: '#EEF0FF', iconColor: '#7952B3' },
-    { name: 'Axios', icon: 'Ax', iconBg: '#E3F2FD', iconColor: '#1A56DB' },
+export const skills={
+  proficient:[
+    {name:'HTML5',icon:'H5',bg:'#FFF3E0',color:'#E44D26'},{name:'CSS3',icon:'C3',bg:'#E3F2FD',color:'#1572B6'},
+    {name:'JavaScript',icon:'JS',bg:'#FFFDE7',color:'#9A7500'},{name:'React.js',icon:'Re',bg:'#E8F4FD',color:'#0088CC'},
+    {name:'Node.js',icon:'No',bg:'#E8F5E9',color:'#339933'},{name:'Express.js',icon:'Ex',bg:'#F3F3F3',color:'#444444'},
+    {name:'MongoDB',icon:'Mg',bg:'#E8F5E9',color:'#47A248'},{name:'REST APIs',icon:'AP',bg:'#EDE7F6',color:'#7C3AED'},
+    {name:'Git',icon:'Gt',bg:'#FFF3E0',color:'#F05032'},{name:'GitHub',icon:'Gh',bg:'#F0F0F0',color:'#333333'},
+    {name:'Postman',icon:'Po',bg:'#FFF0E6',color:'#FF6C37'},{name:'Bootstrap',icon:'Bs',bg:'#EEF0FF',color:'#7952B3'},
+    {name:'Axios',icon:'Ax',bg:'#E8F0FF',color:'#4F46E5'},
   ],
-  familiar: [
-    { name: 'Socket.io', icon: 'SK', iconBg: '#F0F0F0', iconColor: '#333333' },
-    { name: 'Vite', icon: 'Vi', iconBg: '#EEF0FF', iconColor: '#646CFF' },
-    { name: 'MVC Pattern', icon: 'MV', iconBg: '#E3F2FD', iconColor: '#1A56DB' },
-    { name: 'Netlify', icon: 'Nl', iconBg: '#E8F5E9', iconColor: '#00AD9F' },
+  familiar:[
+    {name:'Socket.io',icon:'SK',bg:'#F5F5F5',color:'#010101'},{name:'Vite',icon:'Vi',bg:'#EEF0FF',color:'#646CFF'},
+    {name:'MVC Pattern',icon:'MV',bg:'#E8F0FF',color:'#4F46E5'},{name:'JWT Auth',icon:'JW',bg:'#FFF3E0',color:'#F59E0B'},
+    {name:'Multer',icon:'Mu',bg:'#F0FDF4',color:'#16A34A'},{name:'Netlify',icon:'Nl',bg:'#E8F5E9',color:'#00AD9F'},
+    {name:'Vercel',icon:'Vl',bg:'#F5F5F5',color:'#000000'},
   ],
-  learning: [
-    { name: 'TypeScript', icon: 'Ts', iconBg: '#E3F2FD', iconColor: '#3178C6' },
-    { name: 'Next.js', icon: 'Nx', iconBg: '#F0F0F0', iconColor: '#333333' },
-    { name: 'Docker', icon: 'Dk', iconBg: '#E3F2FD', iconColor: '#2496ED' },
-    { name: 'PostgreSQL', icon: 'Pg', iconBg: '#E8F5E9', iconColor: '#336791' },
-    { name: 'AWS', icon: 'AW', iconBg: '#FFF3E0', iconColor: '#FF9900' },
+  learning:[
+    {name:'TypeScript',icon:'Ts',bg:'#E3F2FD',color:'#3178C6'},{name:'Next.js',icon:'Nx',bg:'#F5F5F5',color:'#000000'},
+    {name:'Docker',icon:'Dk',bg:'#E3F2FD',color:'#2496ED'},{name:'PostgreSQL',icon:'Pg',bg:'#E8F5E9',color:'#336791'},
+    {name:'AWS',icon:'AW',bg:'#FFF3E0',color:'#FF9900'},
   ],
 };
-
-// 4. Other Metadata
-export const education = [
-  { degree: 'BS Computer Science', inst: 'University of the Punjab, Lahore', year: '2025 – 2029' },
-  { degree: 'Intermediate — ICS (Physics)', inst: 'Govt M.A.O College, Lahore', year: '2025' },
-  { degree: 'Matriculation — General Science', inst: 'Govt. Central Model School, Samnabad', year: '2023' },
-  { degree: 'Web Development Certificate', inst: 'Peak Solution, Lahore', year: 'Aug 2023' },
+export const proficiency=[
+  {label:'React.js',pct:82,color:'#4F46E5'},{label:'JavaScript ES6+',pct:80,color:'#F59E0B'},
+  {label:'HTML5 / CSS3',pct:88,color:'#F97316'},{label:'Node.js / Express',pct:68,color:'#10B981'},
+  {label:'MongoDB',pct:62,color:'#6366F1'},
 ];
-
-export const proficiency = [
-  { label: 'React.js', pct: 82 },
-  { label: 'JavaScript ES6+', pct: 80 },
-  { label: 'HTML5 / CSS3', pct: 88 },
-  { label: 'Node.js / Express', pct: 68 },
-  { label: 'MongoDB', pct: 62 },
+export const education=[
+  {degree:'BS Computer Science',inst:'University of the Punjab, Lahore',year:'2025 – 2029'},
+  {degree:'Intermediate — ICS (Physics)',inst:'Govt M.A.O College, Lahore',year:'2025'},
+  {degree:'Matriculation',inst:'Govt. Central Model School',year:'2023'},
+  {degree:'Web Development Certificate',inst:'Peak Solution, Lahore',year:'Aug 2023'},
+];
+export const stats=[
+  {num:9,suffix:'+',label:'Projects Built',color:'#4F46E5'},
+  {num:3,suffix:'',label:'Live Projects',color:'#F97316',link:'/projects'},
+  {num:20,suffix:'+',label:'Technologies',color:'#10B981'},
+  {num:100,suffix:'%',label:'Self-Taught',color:'#6366F1'},
+];
+export const techTicker=[
+  'React.js','Node.js','MongoDB','Express.js','JavaScript','REST APIs','Socket.io','JWT Auth','Vite','Git','Postman','MVC','Multer','Axios',
+  'React.js','Node.js','MongoDB','Express.js','JavaScript','REST APIs','Socket.io','JWT Auth','Vite','Git','Postman','MVC','Multer','Axios',
 ];
