@@ -1,36 +1,37 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
-import { useReveal, useRevealGroup } from '../hooks/useReveal';
+import { useReveal } from '../hooks/useReveal';
 import { skills } from '../data/portfolio';
+import SEO from '../components/SEO';
 import './Skills.css';
 
+function SkillPill({ skill }) {
+  return (
+    <div className="skill-pill">
+      <span className="skill-pill__icon" style={{ background: skill.iconBg, color: skill.iconColor }}>
+        {skill.icon}
+      </span>
+      <span className="skill-pill__name">{skill.name}</span>
+    </div>
+  );
+}
+
 const GROUPS = [
-  { key: 'proficient', label: 'Proficient',        sub: 'Technologies I use every day',  dot: '#4F46E5' },
-  { key: 'familiar',   label: 'Familiar',           sub: 'Tools I work with regularly',   dot: '#F97316' },
-  { key: 'learning',   label: 'Currently Learning', sub: "What I'm building towards",     dot: '#10B981' },
+  { key: 'proficient', label: 'Proficient — use daily', dotColor: '#1A56DB' },
+  { key: 'familiar',   label: 'Familiar — growing',     dotColor: '#F59E0B' },
+  { key: 'learning',   label: 'Currently learning',     dotColor: '#8B5CF6' },
 ];
 
 function SkillGroup({ group }) {
-  const ref = useRevealGroup();
+  const ref = useReveal();
   return (
-    <div className="skills-group reveal-group" ref={ref}>
-      <div className="skills-group__header reveal">
-        <div className="skills-group__dot" style={{ background: group.dot, boxShadow: `0 0 0 4px ${group.dot}22` }} />
-        <div>
-          <h2>{group.label}</h2>
-          <p>{group.sub}</p>
-        </div>
-        <span className="skills-group__count">{skills[group.key].length} skills</span>
+    <div className="skills__group reveal" ref={ref}>
+      <div className="skills__group-header">
+        <span className="skills__dot" style={{ background: group.dotColor, boxShadow: `0 0 0 3px ${group.dotColor}28` }} />
+        <h2>{group.label}</h2>
+        <span className="skills__count">{skills[group.key].length}</span>
       </div>
-      <div className="skills-grid">
-        {skills[group.key].map((s, i) => (
-          <div key={s.name} className="skill-pill reveal" style={{ transitionDelay: `${i * 50}ms` }}>
-            <div className="skill-pill__icon" style={{ background: s.bg, color: s.color }}>
-              {s.icon}
-            </div>
-            <span className="skill-pill__name">{s.name}</span>
-          </div>
-        ))}
+      <div className="skills__pills">
+        {skills[group.key].map(s => <SkillPill key={s.name} skill={s} />)}
       </div>
     </div>
   );
@@ -38,51 +39,22 @@ function SkillGroup({ group }) {
 
 export default function Skills() {
   const headerRef = useReveal();
-
   return (
-    <>
-      <SEOHead
-        title="Skills — Haseeb Portfolio | MERN Stack Developer Tech Stack"
-        description="Explore the technical skills of Haseeb Portfolio — React.js, Node.js, Express.js, MongoDB, JWT, Socket.io, REST APIs and more. Full-stack JavaScript developer from Lahore, Pakistan."
-        keywords="haseeb portfolio skills, MERN stack skills, React.js Node.js MongoDB developer, JavaScript developer skills Lahore"
+    <main className="page-wrap">
+      <SEO
+        title="Skills | React, Node.js, MongoDB — Haseeb Developer"
+        description="Technical skills of Muhammad Haseeb Ur Rehman — React.js, Node.js, Express.js, MongoDB, JavaScript, HTML5, CSS3, REST APIs, Git and more."
         path="/skills"
+        keywords="haseeb portfolio, haseeb codess portfolio, freelancer developer skills, MERN stack skills, React developer skills, portfolio skills"
       />
-
-      <main className="page-wrap skills-page">
-        <div className="container">
-          <header className="page-header reveal" ref={headerRef}>
-            <span className="sec-eyebrow">Tech Stack</span>
-            <h1 className="sec-title">Languages <span>&amp; Tools</span></h1>
-            <p className="sec-sub">
-              Technologies I use daily, tools I'm growing with, and what I'm learning next.
-              All self-taught, all battle-tested in real projects.
-            </p>
-          </header>
-
-          <div className="skills-page__content">
-            {GROUPS.map(g => <SkillGroup key={g.key} group={g} />)}
-          </div>
-
-          {/* 3D LEARNING BANNER */}
-          <div className="skills-banner reveal">
-            <div className="skills-banner__shapes" aria-hidden="true">
-              <div className="skills-banner__cube" />
-              <div className="skills-banner__sphere" />
-              <div className="skills-banner__ring" />
-            </div>
-            <div className="skills-banner__content">
-              <h2>Always Learning, Always Building</h2>
-              <p>
-                Every skill I list here was learned by building a real project with it.
-                No tutorial hell — just production code and real problem solving.
-              </p>
-              <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer" className="btn-coral">
-                See Projects on GitHub ↗
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
+      <div className="container">
+        <header className="page-header reveal" ref={headerRef}>
+          <span className="sec-label">// tech stack</span>
+          <h1 className="sec-title">Languages & Tools</h1>
+          <p className="sec-sub">Technologies I use daily, tools I'm growing with, and what's next.</p>
+        </header>
+        {GROUPS.map(g => <SkillGroup key={g.key} group={g} />)}
+      </div>
+    </main>
   );
 }

@@ -1,5 +1,0 @@
-.ticker{overflow:hidden;background:var(--indigo);padding:14px 0;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);}
-.ticker__track{display:flex;align-items:center;width:max-content;animation:ticker 28s linear infinite;}
-.ticker__track:hover{animation-play-state:paused;}
-.ticker__item{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:13px;font-weight:500;color:rgba(255,255,255,0.85);padding:0 24px;white-space:nowrap;text-transform:uppercase;letter-spacing:0.06em;}
-.ticker__dot{width:5px;height:5px;border-radius:50%;background:var(--coral);flex-shrink:0;}

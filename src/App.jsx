@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './context/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,24 +16,15 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 function PageLoader() {
   return (
-    <div style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      minHeight: 'calc(100vh - var(--nav-h))',
-    }}>
-      <div style={{
-        width: 36, height: 36,
-        border: '3px solid var(--bg3)',
-        borderTopColor: 'var(--indigo)',
-        borderRadius: '50%',
-        animation: 'spin 0.7s linear infinite',
-      }} />
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 'calc(100vh - var(--nav-h))' }}>
+      <div style={{ width: 32, height: 32, border: '2.5px solid var(--bg3)', borderTopColor: 'var(--accent)', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
     </div>
   );
 }
 
 export default function App() {
   return (
-    <HelmetProvider>
+    <ThemeProvider>
       <BrowserRouter>
         <ErrorBoundary>
           <ScrollToTop />
@@ -51,6 +42,6 @@ export default function App() {
           <Footer />
         </ErrorBoundary>
       </BrowserRouter>
-    </HelmetProvider>
+    </ThemeProvider>
   );
 }
