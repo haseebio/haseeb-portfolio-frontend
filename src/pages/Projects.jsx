@@ -34,7 +34,7 @@ export default function Projects() {
           title="Projects | Full Stack, Frontend & Backend — Haseeb"
           description="Portfolio projects by Muhammad Haseeb Ur Rehman — Weather App, Chat App, CRUD App, Password Generator, RJ Cafe Website and more. Built with React, Node.js, MongoDB."
           path="/projects"
-          keywords="haseeb portfolio, haseeb codess portfolio, haseeb codess projects, portfolio projects, freelancer developer, MERN stack projects, React projects Pakistan"
+          keywords="haseeb portfolio, haseebio portfolio, haseebio projects, portfolio projects, freelancer developer, MERN stack projects, React projects Pakistan"
         />
         <header className="page-header reveal" ref={headerRef}>
           <span className="sec-label">// projects</span>
@@ -83,7 +83,7 @@ export default function Projects() {
           {!hasMore && filtered.length > 0 && (
             <div className="proj-github-cta">
               <p>These are the highlights — many more on GitHub.</p>
-              <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer" className="btn-outline">
+              <a href="https://github.com/haseebio" target="_blank" rel="noreferrer" className="btn-outline">
                 View all on GitHub →
               </a>
             </div>

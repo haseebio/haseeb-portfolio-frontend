@@ -13,7 +13,7 @@ export default function About() {
         title="About | Muhammad Haseeb Ur Rehman"
         description="Learn about Muhammad Haseeb Ur Rehman — a self-taught MERN Stack Developer from Lahore, Pakistan studying CS at University of the Punjab."
         path="/about"
-        keywords="about haseeb portfolio, haseeb portfolio, haseeb codess, haseeb codess portfolio, freelancer, self-taught MERN stack developer Lahore"
+        keywords="about haseeb portfolio, haseeb portfolio, haseebio, haseebio portfolio, freelancer, self-taught MERN stack developer Lahore"
       />
       <div className="container">
         <header className="page-header reveal" ref={r1}>
@@ -28,8 +28,8 @@ export default function About() {
             <p>
               I'm a CS student at the University of the Punjab (2025–2029) who started
               coding because I wanted to build things — not just study theory. I taught
-              myself MERN stack development independently, shipped multiple projects, and
-              landed a real client website for Pluto Coffee &amp; Art in Lahore.
+              myself MERN stack development independently and shipped multiple full-stack
+              projects covering real-time apps, REST APIs, and complete CRUD systems.
             </p>
             <p>
               I believe in learning by shipping. Every project I build solves a real problem.

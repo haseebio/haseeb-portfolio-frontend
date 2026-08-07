@@ -15,16 +15,6 @@ import pg2 from '../assets/projects/images/password-generator/pg2.webp'
 import pg3 from '../assets/projects/images/password-generator/pg3.webp'
 import pg4 from '../assets/projects/images/password-generator/pg4.webp'
 
-import pc1 from '../assets/projects/images/plutto/pc1.webp'
-import pc2 from '../assets/projects/images/plutto/pc2.webp'
-import pc3 from '../assets/projects/images/plutto/pc3.webp'
-import pc4 from '../assets/projects/images/plutto/pc4.webp'
-import pc5 from '../assets/projects/images/plutto/pc5.webp'
-import pc6 from '../assets/projects/images/plutto/pc6.webp'
-import pc7 from '../assets/projects/images/plutto/pc7.webp'
-import pc8 from '../assets/projects/images/plutto/pc8.webp'
-import pc9 from '../assets/projects/images/plutto/pc9.webp'
-
 import su1 from '../assets/projects/images/sign-up-form/su1.webp'
 import su2 from '../assets/projects/images/sign-up-form/su2.webp'
 import su3 from '../assets/projects/images/sign-up-form/su3.webp'
@@ -50,9 +40,9 @@ export const projects = [
     desc: 'Audits any business website for SEO, SSL, mobile readiness and missed opportunities.',
     stack: ['React', 'Node.js', 'Express', 'Cheerio', 'Axios'],
     images: [whc1, whc2, whc3, whc4],
-    github: 'https://github.com/haseebcodess',
+    github: 'https://github.com/haseebio',
     demo: 'https://websitehealthchecker.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
     id: 2, category: 'fullstack', tags: ['fullstack', 'backend'],
@@ -60,69 +50,59 @@ export const projects = [
     desc: 'Complete data lifecycle — GET, POST, PUT, DELETE. MongoDB schema from scratch, MVC backend.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Axios', 'Postman'],
     images: [co1, co2, co3],
-    github: 'https://github.com/haseebcodess/crud-operation',
+    github: 'https://github.com/haseebio/crud-operation',
     demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
-    id: 3, category: 'fullstack', tags: ['fullstack', 'frontend'],
-    title: 'Pluto Coffee & Art',
-    desc: 'Live client project for a real café in DHA Y-Block, Lahore. Dark luxury UI with glassmorphism.',
-    stack: ['React', 'Node.js', 'Express', 'CSS3'],
-    images: [pc1, pc2, pc3, pc4, pc5, pc6, pc7, pc8, pc9],
-    github: 'https://github.com/haseebcodess',
-    demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
-  },
-  {
-    id: 4, category: 'fullstack', tags: ['fullstack', 'backend'],
+    id: 3, category: 'fullstack', tags: ['fullstack', 'backend'],
     title: 'Real-Time Chat App',
     desc: 'Live bidirectional messaging with Socket.io. Room-based chat, real-time event broadcasting.',
     stack: ['Node.js', 'Socket.io', 'Express', 'React'],
     images: [ca1, ca2],
-    github: 'https://github.com/haseebcodess',
+    github: 'https://github.com/haseebio',
     demo: 'https://openchat-live.vercel.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
-    id: 5, category: 'fullstack', tags: ['fullstack', 'frontend'],
+    id: 4, category: 'fullstack', tags: ['fullstack', 'frontend'],
     title: 'RJ Cafe Website',
     desc: 'Complete restaurant website with dynamic JS menu — no page reloads.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
     images: [cp1, cp2, cp3],
-    github: 'https://github.com/haseebcodess/cafe',
+    github: 'https://github.com/haseebio/cafe',
     demo: 'https://rjcafe.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
-    id: 6, category: 'fullstack', tags: ['fullstack', 'frontend'],
+    id: 5, category: 'fullstack', tags: ['fullstack', 'frontend'],
     title: 'Weather Application',
     desc: 'Real-time weather from OpenWeatherMap API. Light/dark mode toggle.',
     stack: ['React', 'Axios', 'OpenWeather API', 'CSS3'],
     images: [wa1, wa2, wa3, wa4],
-    github: 'https://github.com/haseebcodess/weather-app',
+    github: 'https://github.com/haseebio/weather-app',
     demo: 'https://haseeb-weather-app.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
-    id: 7, category: 'fullstack', tags: ['fullstack', 'frontend'],
+    id: 6, category: 'fullstack', tags: ['fullstack', 'frontend'],
     title: 'Password Generator',
     desc: 'Configurable password generator with one-click clipboard copy using the Clipboard API.',
     stack: ['React', 'Vite', 'React Hooks', 'Clipboard API'],
     images: [pg1, pg2, pg3, pg4],
-    github: 'https://github.com/haseebcodess/Random-Password-Generator',
+    github: 'https://github.com/haseebio/Random-Password-Generator',
     demo: 'https://rjpasswordchanger.netlify.app',
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   },
   {
-    id: 8, category: 'fullstack', tags: ['fullstack', 'backend'],
+    id: 7, category: 'fullstack', tags: ['fullstack', 'backend'],
     title: 'Sign Up Form API',
     desc: 'RESTful Node/Express backend with POST and GET endpoints for user registration.',
     stack: ['Node.js', 'Express', 'Axios', 'REST API'],
     images: [su1, su2, su3],
-    github: 'https://github.com/haseebcodess/react-backend',
+    github: 'https://github.com/haseebio/react-backend',
     demo: null,
-    linkedin: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman',
+    linkedin: 'https://www.linkedin.com/in/haseebio',
   }
 ];
 

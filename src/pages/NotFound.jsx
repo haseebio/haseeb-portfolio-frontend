@@ -7,9 +7,9 @@ export default function NotFound() {
     <main style={{ paddingTop: 'calc(var(--nav-h) + 80px)', paddingBottom: 80, textAlign: 'center', fontFamily: 'var(--font-body)' }}>
       <SEO
         title="404 | Page not found — Haseeb Portfolio"
-        description="Page not found on Haseeb Codess portfolio. Return to the homepage to explore Muhammad Haseeb Ur Rehman's portfolio, skills, and contact details."
+        description="Page not found on Haseebio's portfolio. Return to the homepage to explore Muhammad Haseeb Ur Rehman's portfolio, skills, and contact details."
         path="/404"
-        keywords="haseeb portfolio, portfolio, haseeb codess, freelancer, page not found"
+        keywords="haseeb portfolio, portfolio, haseebio, freelancer, page not found"
       />
       <span className="sec-label" style={{ display: 'inline-block', marginBottom: 12 }}>404</span>
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,5vw,3rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--text)', marginBottom: 14 }}>

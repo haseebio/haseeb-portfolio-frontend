@@ -2,6 +2,43 @@
 .contact-hero {
   background: var(--contact-bg); padding: 72px 0 60px;
 }
+.contact-hero__row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.contact-hero__character { position: relative; width: 110px; flex-shrink: 0; }
+.cc-illustration { width: 100%; height: auto; }
+.cc-shadow { fill: rgba(0,0,0,0.15); }
+.cc-legs, .cc-body, .cc-arm { fill: #1F2937; }
+.cc-head { fill: #F5C99B; }
+.cc-arm--wave {
+  transform-origin: 78px 76px;
+  animation: ccWave 1s ease-in-out infinite;
+}
+@keyframes ccWave { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(-30deg); } }
+
+.contact-bubble {
+  position: absolute; top: -18px; right: -6px;
+  background: #fff; color: #1F2937;
+  padding: 8px 14px; border-radius: 14px;
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+  animation: bubblePop 0.4s ease forwards;
+  opacity: 0;
+}
+.contact-bubble::after {
+  content: ''; position: absolute; bottom: -5px; right: 22px;
+  width: 10px; height: 10px; background: #fff; transform: rotate(45deg);
+}
+@keyframes bubblePop {
+  from { opacity: 0; transform: translateY(6px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 700px) {
+  .contact-hero__character { display: none; }
+}
+
 .contact-grid {
   display: grid; grid-template-columns: 1fr 400px;
   gap: 28px; align-items: start;

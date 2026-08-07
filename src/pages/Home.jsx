@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
+import { useMagnetic } from '../hooks/useMagnetic';
+import { useParallax } from '../hooks/useParallax';
 import { skills, projects } from '../data/portfolio';
-import profileImg from '../assets/profile.webp';
 import SEO from '../components/SEO';
 import './Home.css';
 
@@ -13,6 +14,9 @@ function Section({ children, className = '' }) {
 
 export default function Home() {
   const heroRef = useReveal(0.05);
+  const magnetPrimary = useMagnetic(0.3);
+  const magnetSecondary = useMagnetic(0.3);
+  const parallax = useParallax();
 
   const featuredProjects = projects.filter(p => p.category === 'fullstack').slice(0, 3);
   const proficientSkills = skills.proficient.slice(0, 8);
@@ -23,13 +27,17 @@ export default function Home() {
         title="Muhammad Haseeb Ur Rehman | MERN Stack Developer Lahore"
         description="Self-taught MERN Stack Developer from Lahore, Pakistan. Building full-stack web apps with React, Node.js, Express and MongoDB. Available for freelance and internships."
         path="/"
-        keywords="haseeb portfolio, portfolio, haseeb codess, haseeb codess portfolio, freelancer, MERN stack developer Lahore, full stack developer Lahore, freelance web developer"
+        keywords="haseeb portfolio, portfolio, haseebio, haseebio portfolio, freelancer, MERN stack developer Lahore, full stack developer Lahore, freelance web developer"
       />
 
       {/* HERO */}
       <section className="hero">
         <div className="container hero__inner">
-          <div className="hero__content reveal" ref={heroRef}>
+          <div
+            className="hero__content reveal"
+            ref={heroRef}
+            style={{ transform: `translate(${parallax.x * -20}px, ${parallax.y * -14}px)` }}
+          >
             <div className="hero__badge">
               <span className="hero__badge-dot" />
               Available for hire · Lahore, Pakistan
@@ -44,17 +52,23 @@ export default function Home() {
               frontends, robust Node.js backends, and real client projects shipped.
             </p>
             <div className="hero__btns">
-              <Link to="/contact" className="btn-hero-primary">
+              <Link to="/contact" className="btn-hero-primary" ref={magnetPrimary}>
                 Contact me
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
               </Link>
-              <Link to="/projects" className="btn-hero-secondary">View projects</Link>
+              <Link to="/projects" className="btn-hero-secondary" ref={magnetSecondary}>View projects</Link>
             </div>
           </div>
-          <div className="hero__image-wrap">
+          <div
+            className="hero__image-wrap"
+            style={{ transform: `translate(${parallax.x * 40}px, ${parallax.y * 28}px)` }}
+          >
             <div className="hero__image-ring">
+              <div className="hero__image-ring-spin" />
+              <div className="hero__image-ring-spin hero__image-ring-spin--rev" />
+              <div className="hero__image-glow" />
               <img
-                src={profileImg}
+                src="/haseebio.dev.jpeg"
                 alt="Muhammad Haseeb Ur Rehman"
                 className="hero__image"
                 onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
@@ -96,9 +110,9 @@ export default function Home() {
                 <h2 className="home-section__title">Who I am</h2>
                 <p>
                   CS student at the University of the Punjab (2025–2029) who taught himself
-                  MERN stack development independently. I shipped multiple live projects and
-                  landed a real client website for Pluto Coffee &amp; Art in Lahore. I believe
-                  in learning by building — every project I make solves a real problem.
+                  MERN stack development independently. I've shipped multiple live projects
+                  and taken on real freelance client work. I believe in learning by building —
+                  every project I make solves a real problem.
                 </p>
                 <div className="home-about__facts">
                   {[
@@ -188,7 +202,7 @@ export default function Home() {
             </div>
             <div className="home-section__actions">
               <Link to="/projects" className="btn-primary">View all projects →</Link>
-              <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer" className="btn-outline">GitHub ↗</a>
+              <a href="https://github.com/haseebio" target="_blank" rel="noreferrer" className="btn-outline">GitHub ↗</a>
             </div>
           </div>
         </section>
@@ -199,13 +213,13 @@ export default function Home() {
         <section className="home-cta">
           <div className="container home-cta__inner">
             <div>
-              <span className="sec-label" style={{ color: '#7DD3FC' }}>// contact</span>
+              <span className="sec-label" style={{ color: '#fff' }}>// contact</span>
               <h2 className="home-cta__title">Let's work together</h2>
               <p className="home-cta__sub">Open to internships, freelance projects, and full-time roles in Lahore.</p>
             </div>
             <div className="home-cta__btns">
               <Link to="/contact" className="btn-hero-primary">Contact me →</Link>
-              <a href="https://linkedin.com/in/muhammad-haseeb-ur-rehman" target="_blank" rel="noreferrer" className="btn-hero-secondary">LinkedIn ↗</a>
+              <a href="https://www.linkedin.com/in/haseebio" target="_blank" rel="noreferrer" className="btn-hero-secondary">LinkedIn ↗</a>
             </div>
           </div>
         </section>

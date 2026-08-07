@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
 import Navbar from './components/Navbar';
@@ -24,24 +25,26 @@ function PageLoader() {
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ScrollToTop />
-          <Navbar />
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/"         element={<Home />}     />
-              <Route path="/about"    element={<About />}    />
-              <Route path="/skills"   element={<Skills />}   />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact"  element={<Contact />}  />
-              <Route path="*"         element={<NotFound />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </ErrorBoundary>
-      </BrowserRouter>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          <ErrorBoundary>
+            <ScrollToTop />
+            <Navbar />
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/"         element={<Home />}     />
+                <Route path="/about"    element={<About />}    />
+                <Route path="/skills"   element={<Skills />}   />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact"  element={<Contact />}  />
+                <Route path="*"         element={<NotFound />} />
+              </Routes>
+            </Suspense>
+            <Footer />
+          </ErrorBoundary>
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }

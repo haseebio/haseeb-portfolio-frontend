@@ -15,8 +15,8 @@ export default function Footer() {
           <NavLink to="/" className="footer__logo">haseeb<span>.</span>dev</NavLink>
           <p>MERN Stack Developer based in Lahore, Pakistan. Building real products that solve real problems.</p>
           <div className="footer__socials">
-            <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer" aria-label="GitHub"><GH /></a>
-            <a href="https://linkedin.com/in/muhammad-haseeb-ur-rehman" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LI /></a>
+            <a href="https://github.com/haseebio" target="_blank" rel="noreferrer" aria-label="GitHub"><GH /></a>
+            <a href="https://www.linkedin.com/in/haseebio" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LI /></a>
             <a href="mailto:haseebur341@gmail.com" aria-label="Email"><EM /></a>
             <a href="https://wa.me/923044170843" target="_blank" rel="noreferrer" aria-label="WhatsApp"><WA /></a>
           </div>
@@ -40,11 +40,10 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Projects</h4>
-          <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer">Website Health Checker</a>
-          <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer">Pluto Coffee & Art</a>
-          <a href="https://github.com/haseebcodess" target="_blank" rel="noreferrer">Real-Time Chat App</a>
+          <a href="https://github.com/haseebio" target="_blank" rel="noreferrer">Website Health Checker</a>
+          <a href="https://github.com/haseebio" target="_blank" rel="noreferrer">Real-Time Chat App</a>
           <a href="https://haseeb-weather-app.netlify.app" target="_blank" rel="noreferrer">Weather Application</a>
-          <a href="https://github.com/haseebcodess/crud-operation" target="_blank" rel="noreferrer">CRUD App</a>
+          <a href="https://github.com/haseebio/crud-operation" target="_blank" rel="noreferrer">CRUD App</a>
         </div>
       </div>
       <div className="footer__bottom">

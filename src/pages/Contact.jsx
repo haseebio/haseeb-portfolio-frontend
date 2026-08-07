@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useReveal } from '../hooks/useReveal';
 import SEO from '../components/SEO';
@@ -8,9 +8,9 @@ const INIT = { name: '', email: '', subject: '', message: '' };
 
 const SOCIAL = [
   { id: 'email',    label: 'Email',    val: 'haseebur341@gmail.com',      href: 'mailto:haseebur341@gmail.com', bg: '#FEF2F2', color: '#EA4335' },
-  { id: 'linkedin', label: 'LinkedIn', val: 'muhammad-haseeb-ur-rehman',  href: 'https://linkedin.com/in/muhammad-haseeb-ur-rehman', bg: '#EFF6FF', color: '#0A66C2' },
+  { id: 'linkedin', label: 'LinkedIn', val: 'linkedin.com/in/haseebio',  href: 'https://www.linkedin.com/in/haseebio', bg: '#EFF6FF', color: '#0A66C2' },
   { id: 'whatsapp', label: 'WhatsApp', val: '+92 304 4170843',             href: 'https://wa.me/923044170843', bg: '#F0FDF4', color: '#25D366' },
-  { id: 'github',   label: 'GitHub',   val: 'github.com/haseebcodess',    href: 'https://github.com/haseebcodess', bg: '#F8F8F8', color: '#24292F' },
+  { id: 'github',   label: 'GitHub',   val: 'github.com/haseebio',    href: 'https://github.com/haseebio', bg: '#F8F8F8', color: '#24292F' },
 ];
 
 const ICONS = {
@@ -30,12 +30,31 @@ function validate(f) {
   return e;
 }
 
+function ContactCharacter() {
+  return (
+    <svg viewBox="0 0 120 160" className="cc-illustration" role="img" aria-label="Illustration of a person waving">
+      <ellipse className="cc-shadow" cx="60" cy="150" rx="34" ry="8" />
+      <rect className="cc-legs" x="46" y="106" width="28" height="40" rx="10" />
+      <rect className="cc-body" x="40" y="66" width="40" height="46" rx="16" />
+      <circle className="cc-head" cx="60" cy="46" r="22" />
+      <rect className="cc-arm cc-arm--still" x="14" y="71" width="30" height="10" rx="5" />
+      <rect className="cc-arm cc-arm--wave" x="76" y="71" width="30" height="10" rx="5" />
+    </svg>
+  );
+}
+
 export default function Contact() {
   const [form,   setForm]   = useState(INIT);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
   const [apiErr, setApiErr] = useState('');
+  const [showBubble, setShowBubble] = useState(false);
   const r1 = useReveal(); const r2 = useReveal();
+
+  useEffect(() => {
+    const t = setTimeout(() => setShowBubble(true), 1200);
+    return () => clearTimeout(t);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,16 +83,20 @@ export default function Contact() {
         title="Contact | Hire Haseeb Ur Rehman — MERN Stack Developer"
         description="Get in touch with Muhammad Haseeb Ur Rehman. Available for freelance projects, internships and full-time roles in Lahore, Pakistan."
         path="/contact"
-        keywords="haseeb portfolio, haseeb codess portfolio, hire haseeb ur rehman, freelancer web developer, contact haseeb developer, freelance MERN stack developer"
+        keywords="haseeb portfolio, haseebio portfolio, hire haseeb ur rehman, freelancer web developer, contact haseeb developer, freelance MERN stack developer"
       />
       <div className="contact-hero">
-        <div className="container">
+        <div className="container contact-hero__row">
           <div className="reveal" ref={r1}>
-            <span className="sec-label" style={{ color: '#7DD3FC' }}>// contact</span>
+            <span className="sec-label" style={{ color: '#fff' }}>// contact</span>
             <h1 className="sec-title" style={{ color: '#fff' }}>Let's work together</h1>
-            <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="sec-sub" style={{ color: 'rgba(255,255,255,0.85)' }}>
               Open to internships, freelance projects, and full-time roles in Lahore.
             </p>
+          </div>
+          <div className="contact-hero__character">
+            <ContactCharacter />
+            {showBubble && <div className="contact-bubble">Hi, let's talk! 👋</div>}
           </div>
         </div>
       </div>

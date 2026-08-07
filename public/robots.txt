@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://haseeb-codess-portfolio.netlify.app/sitemap.xml
+Sitemap: https://haseebio-portfolio.netlify.app/sitemap.xml

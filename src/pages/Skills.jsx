@@ -16,7 +16,7 @@ function SkillPill({ skill }) {
 }
 
 const GROUPS = [
-  { key: 'proficient', label: 'Proficient — use daily', dotColor: '#1A56DB' },
+  { key: 'proficient', label: 'Proficient — use daily', dotColor: '#FF6B4A' },
   { key: 'familiar',   label: 'Familiar — growing',     dotColor: '#F59E0B' },
   { key: 'learning',   label: 'Currently learning',     dotColor: '#8B5CF6' },
 ];
@@ -45,7 +45,7 @@ export default function Skills() {
         title="Skills | React, Node.js, MongoDB — Haseeb Developer"
         description="Technical skills of Muhammad Haseeb Ur Rehman — React.js, Node.js, Express.js, MongoDB, JavaScript, HTML5, CSS3, REST APIs, Git and more."
         path="/skills"
-        keywords="haseeb portfolio, haseeb codess portfolio, freelancer developer skills, MERN stack skills, React developer skills, portfolio skills"
+        keywords="haseeb portfolio, haseebio portfolio, freelancer developer skills, MERN stack skills, React developer skills, portfolio skills"
       />
       <div className="container">
         <header className="page-header reveal" ref={headerRef}>

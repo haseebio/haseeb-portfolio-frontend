@@ -3,6 +3,8 @@
   z-index: 200;
   height: var(--nav-h);
   background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid transparent;
   transition: border-color var(--tr), background var(--tr), box-shadow var(--tr);
 }
@@ -41,7 +43,10 @@
 
 .navbar__mobile {
   display: none; position: fixed; inset: var(--nav-h) 0 0 0;
-  background: var(--nav-bg); padding: 2rem 24px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem 24px;
   flex-direction: column; z-index: 199;
   opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
   border-top: 1px solid var(--border);

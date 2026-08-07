@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const BASE_URL = 'https://haseeb-codess-portfolio.netlify.app';
+const BASE_URL = 'https://haseebio-portfolio.netlify.app';
 const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 export default function SEO({ title, description, path = '', keywords = '' }) {

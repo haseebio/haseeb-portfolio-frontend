@@ -1,6 +1,6 @@
 .modal-overlay {
   position: fixed; inset: 0; z-index: 300;
-  background: rgba(8,15,35,0.78);
+  background: rgba(0,0,0,0.7);
   display: flex; align-items: center; justify-content: center;
   padding: 20px; animation: fadeIn 0.2s ease;
 }
@@ -24,7 +24,7 @@
 .modal-arrow {
   position: absolute; top: 50%; transform: translateY(-50%);
   width: 32px; height: 32px; border-radius: 50%;
-  background: rgba(10,22,40,0.7); border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.25);
   color: #fff; font-size: 14px; z-index: 10;
   display: flex; align-items: center; justify-content: center;
   transition: background var(--tr); cursor: pointer;
@@ -48,7 +48,7 @@
   position: absolute; bottom: 10px; right: 12px;
   font-size: 10px; font-family: var(--font-mono);
   color: rgba(255,255,255,0.55); z-index: 10;
-  background: rgba(10,22,40,0.5); padding: 2px 7px; border-radius: 99px;
+  background: rgba(0,0,0,0.45); padding: 2px 7px; border-radius: 99px;
 }
 .modal-body { padding: 24px; }
 .modal-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
