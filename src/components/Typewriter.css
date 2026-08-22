@@ -1,0 +1,26 @@
+/* src/components/Typewriter.css */
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  background: var(--coral);
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: tw-blink 0.8s step-end infinite;
+}
+
+.typewriter-cursor.idle {
+  animation: tw-blink 1.4s step-end infinite;
+}
+
+@keyframes tw-blink {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-cursor {
+    display: none;
+  }
+}

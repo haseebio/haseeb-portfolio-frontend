@@ -1,0 +1,132 @@
+/* src/components/BuildPipeline.css */
+
+.system {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 36px 32px;
+}
+
+.system-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 28px;
+}
+
+.pipeline-vertical {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.pipeline-stage {
+  display: flex;
+  gap: 22px;
+}
+
+.pipeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pipeline-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: background 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
+}
+
+.pipeline-stage.is-visible .pipeline-icon-wrap {
+  background: linear-gradient(135deg, var(--coral), var(--yellow));
+  border-color: transparent;
+}
+
+.pipeline-line {
+  width: 2px;
+  flex: 1;
+  min-height: 30px;
+  margin: 6px 0;
+  position: relative;
+  background: var(--border);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.pipeline-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, var(--coral) 45%, var(--yellow) 55%, transparent 100%);
+  background-size: 100% 200%;
+  animation: pipeline-shimmer 2.4s linear infinite;
+}
+
+@keyframes pipeline-shimmer {
+  0% {
+    background-position: 0% -100%;
+  }
+  100% {
+    background-position: 0% 200%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pipeline-line::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.pipeline-content {
+  padding-bottom: 30px;
+}
+
+.pipeline-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-disp);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.pipeline-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.pipeline-content p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 48ch;
+}
+
+.system-note {
+  margin-top: 8px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.system-note strong {
+  color: var(--ink);
+  font-weight: 600;
+}

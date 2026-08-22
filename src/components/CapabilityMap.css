@@ -1,0 +1,67 @@
+/* src/components/CapabilityMap.css */
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 860px) {
+  .cap-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cap-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.cap-card h3 {
+  font-family: var(--font-disp);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.cap-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cap-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cap-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
