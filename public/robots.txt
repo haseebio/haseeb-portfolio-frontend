@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://haseebio-portfolio.netlify.app/sitemap.xml
