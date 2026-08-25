@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://haseebio-portfolio.netlify.app/</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/about</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/projects</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/skills</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/blog</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/blog/hard-budget-cap-on-every-ai-call</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/blog/stackradar-hackathon-to-production</loc></url>
-  <url><loc>https://haseebio-portfolio.netlify.app/contact</loc></url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/about</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/projects</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/skills</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/blog</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://haseebio-portfolio.netlify.app/contact</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!--
+    Individual blog posts (/blog/<slug>) are NOT listed here.
+    data/blog.js currently only has the PLACEHOLDER post — I'm not
+    going to sitemap a fake URL. Once your real posts are in blog.js,
+    add one <url> block per post here, e.g.:
+
+    <url>
+      <loc>https://haseebio-portfolio.netlify.app/blog/your-real-slug</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+    </url>
+
+    Reminder from your own project notes: this file is static, not
+    auto-generated — it will not update itself when you add pages.
+  -->
+
 </urlset>

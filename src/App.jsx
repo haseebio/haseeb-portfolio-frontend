@@ -14,22 +14,12 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import { useTheme } from './hooks/useTheme';
 import { useJsonLd } from './hooks/useJsonLd';
+import { useNoIndex } from './hooks/useNoIndex';
 import { profile } from './data/portfolio';
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
 
-  // Site-wide Person + WebSite structured data — helps Google and AI answer
-  // engines understand who you are, independent of whatever page loaded first.
-  // Uses id='ld-json-site' specifically so it never collides with the
-  // per-blog-post BlogPosting/FAQPage schema, which uses the default id.
-  //
-  // Per-page <title> and meta description are now handled by each page's own
-  // useSEO() call instead of one generic value here — this used to set the
-  // same title/description on every route, which is a real duplicate-meta
-  // SEO problem. index.html's own <meta name="description"> tag (outside
-  // src/) should still be updated manually — that one matters most for the
-  // very first crawl before JS runs.
   const siteSchema = useMemo(
     () => ({
       '@context': 'https://schema.org',
@@ -74,9 +64,20 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
     </>
+  );
+}
+
+function NotFound() {
+  useNoIndex();
+  return (
+    <section className="wrap" style={{ padding: '80px 0', textAlign: 'center' }}>
+      <h1>404</h1>
+      <p>That page doesn't exist.</p>
+    </section>
   );
 }
