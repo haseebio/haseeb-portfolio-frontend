@@ -2,12 +2,10 @@
 User-agent: *
 Allow: /
 
-# --- GEO: AI / answer-engine crawlers ---
-# Explicitly allowed so this site can be cited by AI search and
-# answer engines (ChatGPT, Perplexity, Claude, Google AI Overviews).
-# These are separate user-agents from the general "*" rule above —
-# some crawlers respect a specific block over the wildcard, so they
-# are listed explicitly rather than assumed to be covered by "*".
+# --- GEO/AEO: AI answer-engine crawlers ---
+# Listed explicitly because some of these respect a specific block
+# over the wildcard "*" rule above, rather than being assumed to
+# inherit it.
 
 User-agent: GPTBot
 Allow: /
