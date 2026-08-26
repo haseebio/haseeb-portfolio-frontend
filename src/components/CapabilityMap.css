@@ -44,10 +44,6 @@
   color: var(--ink-soft);
   line-height: 1.55;
   margin-bottom: 16px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .cap-tags {

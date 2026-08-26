@@ -12,7 +12,7 @@ function CompetencyCard({ item, index }) {
       ref={ref}
       style={{ transitionDelay: `${index * 90}ms` }}
     >
-      <h4>{item.title}</h4>
+      <h3>{item.title}</h3>
       <p>{item.desc}</p>
       <Link to={item.projectPath} className="competency-link">
         {item.projectLabel} →
