@@ -9,7 +9,7 @@ import './Contact.css';
 const faqItems = [
   {
     q: 'What kind of work do you take on?',
-    a: 'Freelance projects and internships — full-stack builds, not just front-end mockups.',
+    a: 'Open to work — reach out and we can talk about what you need built.',
   },
   {
     q: 'What\u2019s your tech stack?',
@@ -17,11 +17,23 @@ const faqItems = [
   },
   {
     q: 'Do you work with clients remotely?',
-    a: `Yes. I'm based in Lahore, Pakistan (GMT+5) and communicate async as needed.`,
+    a: `Yes, remote work is the default. I'm based in Lahore, Pakistan.`,
   },
   {
     q: 'How do I get in touch?',
-    a: `Use the form below, or email directly at ${profile.email}.`,
+    a: `Use the contact form above, or email directly at ${profile.email}.`,
+  },
+  {
+    q: 'Who is haseebio?',
+    a: `haseebio is the handle used online by ${profile.name} — a self-taught Full-Stack Developer based in Lahore, Pakistan.`,
+  },
+  {
+    q: 'Is haseebio the same person as Muhammad Haseeb Ur Rehman?',
+    a: `Yes. haseebio, Haseeb dev, and ${profile.name} all refer to the same person.`,
+  },
+  {
+    q: 'What does Haseeb dev build?',
+    a: 'Full-stack products end to end \u2014 AI-powered ticket triage, tech-stack analysis tools, real-time apps, and e-commerce platforms.',
   },
 ];
 

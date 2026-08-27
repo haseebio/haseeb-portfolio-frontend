@@ -1,6 +1,126 @@
-.contact-faq {
+.contact-hero {
+  padding: 90px 0 70px;
+  border-top: none;
+  background: linear-gradient(120deg, #ff6b4a 0%, #ffc93c 100%);
+  border-radius: 0 0 48px 48px;
+  margin-bottom: 20px;
+}
+
+.contact-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-hero-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.wave-mascot {
+  position: relative;
+  flex-shrink: 0;
+  width: 76px;
+}
+
+.wave-figure {
+  display: block;
+}
+
+.wave-arm {
+  transform-origin: 69px 76px;
+  animation: wave-arm-swing 1s ease-in-out infinite;
+}
+
+@keyframes wave-arm-swing {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+.wave-bubble {
+  position: absolute;
+  top: -18px;
+  right: -34px;
+  background: #fff;
+  color: #201510;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  animation: bubble-pop 0.4s ease forwards;
+}
+
+.wave-bubble-tail {
+  position: absolute;
+  bottom: -5px;
+  right: 22px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+@keyframes bubble-pop {
+  from { opacity: 0; transform: translateY(6px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-arm {
+    animation: none;
+  }
+  .wave-bubble {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .wave-mascot {
+    display: none;
+  }
+}
+
+.contact-hero-tag {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  color: #201510;
+  opacity: 0.75;
+  margin-bottom: 14px;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 16px 0 20px;
+  max-width: 16ch;
+  color: #201510;
+}
+
+.contact-hero .lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(32, 21, 16, 0.75);
+  max-width: 58ch;
+}
+
+/* .wrap.contact-faq (compound selector) always beats .wrap alone on
+   specificity, regardless of CSS file load order — the previous
+   version relied on load order and lost, which is why the boxes
+   rendered full-width instead of contained. */
+.wrap.contact-faq {
   max-width: 720px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .faq-list {
@@ -13,7 +133,8 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px 20px;
-  background: var(--surface);
+  background: var(--bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .faq-item summary {
