@@ -21,7 +21,7 @@ export default function Home() {
       <header className="hero hero-centered">
         <div className="wrap">
           <div className="hero-photo-ring">
-            <img src="/haseebio.dev.jpeg" alt={profile.name} className="hero-photo" />
+            <img src="/haseebio.dev.jpeg" alt={profile.name} className="hero-photo" width="400" height="400" fetchpriority="high" />
           </div>
 
           <p className="hero-role">

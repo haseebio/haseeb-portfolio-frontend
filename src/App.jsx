@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import SocialSidebar from './components/SocialSidebar';
 import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -68,6 +69,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent />
     </>
   );
 }

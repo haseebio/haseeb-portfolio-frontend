@@ -2,12 +2,45 @@
 import { useState, useEffect } from 'react';
 import ContactPanel from '../components/ContactPanel';
 import { useSEO } from '../hooks/useSEO';
-import { contactCopy, pageMeta } from '../data/portfolio';
+import { useJsonLd } from '../hooks/useJsonLd';
+import { contactCopy, pageMeta, profile } from '../data/portfolio';
 import './Contact.css';
+
+const faqItems = [
+  {
+    q: 'What kind of work do you take on?',
+    a: 'Freelance projects and internships — full-stack builds, not just front-end mockups.',
+  },
+  {
+    q: 'What\u2019s your tech stack?',
+    a: 'React, Next.js, Node.js, and Python, with AI integrations layered in where they remove real work.',
+  },
+  {
+    q: 'Do you work with clients remotely?',
+    a: `Yes. I'm based in Lahore, Pakistan (GMT+5) and communicate async as needed.`,
+  },
+  {
+    q: 'How do I get in touch?',
+    a: `Use the form below, or email directly at ${profile.email}.`,
+  },
+];
 
 export default function Contact() {
   useSEO(pageMeta.contact.title, pageMeta.contact.description);
   const [showBubble, setShowBubble] = useState(false);
+
+  useJsonLd(
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    },
+    'ld-json-faq'
+  );
 
   useEffect(() => {
     const t = setTimeout(() => setShowBubble(true), 1200);
@@ -54,6 +87,23 @@ export default function Contact() {
       <section>
         <div className="wrap">
           <ContactPanel />
+        </div>
+      </section>
+
+      <section>
+        <div className="wrap contact-faq">
+          <div className="section-head">
+            <div className="eyebrow">Before you reach out</div>
+            <h2>A few common questions</h2>
+          </div>
+          <div className="faq-list">
+            {faqItems.map((item) => (
+              <details className="faq-item" key={item.q}>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>

@@ -1,4 +1,3 @@
-// src/hooks/useSEO.js
 import { useEffect } from 'react';
 
 export function useSEO(title, description) {
@@ -13,5 +12,13 @@ export function useSEO(title, description) {
       }
       meta.content = description;
     }
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://haseebio-portfolio.netlify.app${window.location.pathname}`;
   }, [title, description]);
 }

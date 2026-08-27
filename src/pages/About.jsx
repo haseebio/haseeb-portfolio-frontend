@@ -31,7 +31,7 @@ export default function About() {
             </div>
           </div>
           <div className="about-photo-ring">
-            <img src="/haseebio.dev.png" alt={profile.name} className="about-photo" />
+            <img src="/haseebio.dev.png" alt={profile.name} className="about-photo" width="400" height="400" />
           </div>
         </div>
       </header>
