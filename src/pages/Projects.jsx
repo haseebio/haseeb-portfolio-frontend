@@ -1,4 +1,5 @@
 // src/pages/Projects.jsx
+import { useState } from 'react';
 import ProjectShowcase from '../components/ProjectShowcase';
 import { useSEO } from '../hooks/useSEO';
 import { featuredProjects, otherProjects, pageMeta } from '../data/portfolio';
@@ -6,6 +7,11 @@ import './Projects.css';
 
 export default function Projects() {
   useSEO(pageMeta.projects.title, pageMeta.projects.description);
+  const [openId, setOpenId] = useState(null);
+
+  const toggleProject = (id) => {
+    setOpenId((current) => (current === id ? null : id));
+  };
 
   return (
     <>
@@ -14,8 +20,7 @@ export default function Projects() {
           <div className="eyebrow">Work</div>
           <h1>Things I've built</h1>
           <p className="lead">
-            Real projects, real backends. Expand any of these for the actual problem, the build,
-            and the part that was hard.
+            Real projects, real backends — not mockups.
           </p>
         </div>
       </header>
@@ -27,7 +32,13 @@ export default function Projects() {
             <h2>The three I'd show first</h2>
           </div>
           {featuredProjects.map((project, i) => (
-            <ProjectShowcase key={project.id} project={project} index={i} />
+            <ProjectShowcase
+              key={project.id}
+              project={project}
+              index={i}
+              isOpen={openId === project.id}
+              onToggle={() => toggleProject(project.id)}
+            />
           ))}
         </div>
       </section>
@@ -39,7 +50,13 @@ export default function Projects() {
             <h2>Smaller, still real</h2>
           </div>
           {otherProjects.map((project, i) => (
-            <ProjectShowcase key={project.id} project={project} index={i} />
+            <ProjectShowcase
+              key={project.id}
+              project={project}
+              index={i}
+              isOpen={openId === project.id}
+              onToggle={() => toggleProject(project.id)}
+            />
           ))}
         </div>
       </section>
