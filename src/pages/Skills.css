@@ -1,0 +1,23 @@
+/* src/pages/Skills.css */
+
+.skills-hero {
+  padding: 96px 0 20px;
+  border-top: none;
+}
+
+.skills-hero h1 {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 16px 0 20px;
+  max-width: 14ch;
+}
+
+.skills-hero .lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}

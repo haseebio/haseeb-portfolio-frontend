@@ -1,0 +1,10 @@
+# Muhammad Haseeb Ur Rehman (haseebio)
+
+Full-Stack Developer based in Lahore, Pakistan, building with React, Next.js, Node.js, Python, and AI integrations.
+
+## Pages
+- [Home](https://haseebio-portfolio.netlify.app/)
+- [About](https://haseebio-portfolio.netlify.app/about)
+- [Projects](https://haseebio-portfolio.netlify.app/projects)
+- [Skills](https://haseebio-portfolio.netlify.app/skills)
+- [Contact](https://haseebio-portfolio.netlify.app/contact)

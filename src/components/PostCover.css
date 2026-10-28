@@ -1,0 +1,38 @@
+/* src/components/PostCover.css */
+
+.post-cover {
+  height: 280px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--accent-tint), var(--surface) 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 107, 74, 0.18), transparent 55%);
+}
+
+.post-cover-word {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: clamp(48px, 9vw, 96px);
+  letter-spacing: -0.02em;
+  color: var(--coral);
+  opacity: 0.22;
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .post-cover {
+    height: 180px;
+  }
+}

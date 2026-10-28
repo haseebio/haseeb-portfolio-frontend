@@ -1,0 +1,87 @@
+/* src/components/Nav.css */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-family: var(--font-disp);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo span {
+  color: var(--coral);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--coral);
+  transition: width 0.22s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--ink);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    display: none;
+  }
+}
